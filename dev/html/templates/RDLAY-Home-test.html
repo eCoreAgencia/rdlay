@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="XdPVh6CnBwMvD29gueAKByBDXGd3uvLviSYPHlc5Ol4" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" />
+    <link rel="stylesheet" href="/arquivos/rdlay.css" />
+    <link rel="stylesheet" href="https://ericluciano.com/ecore/rdlay/instagram-rdlay.css" />
+    <vtex:metaTags />
+    <vtex:template id="RDLAY-Favicons" />
+    <script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', 'aa0d577441df5e655b9d8b6a129037708a2879f7');
+</script>
+<meta name="google-site-verification" content="t6SgXZK8K3qFn5zBpra6CubFy8KFPfWLKm2kqAUkpF8" />
+<style>.home-banner-text{font-size:2em;}.home-banner-wrap{background-color: #92a9d1; height: 100%;}</style>
+<style>
+  p.flag.novidades{
+      background-image: url(/arquivos/flag-novidade-lancamento-18.png);
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: 40px 40px;
+      margin-top: 20px;
+      display: block;
+      color: transparent;
+      background-color:transparent;
+    }
+
+    p.flag.liquidacao {
+      background: url(/arquivos/flag-liqui-18.png) !important;
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat !important;
+      background-size: 60px 60px !important;
+      margin-top: 10px !important;
+      display: block;
+      color: transparent;
+      background-color: transparent !important;
+      margin-left: 5px;
+    }
+    </style>
+</head>
+<body>
+    <vtex:template id="RDLAY-Header" />
+
+    <vtex:template id="RDLAY-Header-Fixed" />
+
+    <vtex:template id="RDLAY-Menu-Mobile" />
+
+    <section class="slider hidden-xs">
+        <vtex:contentPlaceHolder id="Slider-Desktop" />
+    </section>
+
+    <section class="slider slider--mobile visible-xs">
+        <vtex:contentPlaceHolder id="Slider-Mobile" />
+    </section>
+
+    <vtex:template id="RDLAY-Tipbar" />
+
+    <section class="home-secondary-banner">
+        <div class="container hidden-xs">
+            <vtex:contentPlaceHolder id="Banner-Promo-Desktop" />
+        </div>
+
+        <div class="container visible-xs">
+            <vtex:contentPlaceHolder id="Banner-Promo-Mobile" />
+        </div>
+    </section>
+
+    <section class="home-banners">
+        <div class="container flex">
+            <a href="/body?PS=48&amp;O=OrderByReleaseDateDESC" class="home-banner is-first bnr1">
+                <figure class="home-banner-wrap">
+                    <img src="/arquivos/rdlay-image-1.jpg" alt="Compre Online e Retire na Loja" title="Compre Online e Retire na Loja" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Compre Online e Retire na Loja
+                    </span></figcaption>
+                </figure>
+            </a>
+            <a href="/vestidos?PS=16&amp;O=OrderByReleaseDateDESC" class="home-banner bnr2">
+                <figure class="home-banner-wrap">
+                    <img src="/arquivos/rdlay-image-2.jpg" alt="Os Vestidos Mais Lindos da Coleção" title="Os Vestidos Mais Lindos da Coleção" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Os Vestidos Mais Lindos da Coleção
+                    </span></figcaption>
+                </figure>
+            </a>
+            <a href="/macacoes---jardineiras?PS=16&amp;O=OrderByReleaseDateDESC" class="home-banner bnr3">
+                <figure class="home-banner-wrap">
+                    <img src="/arquivos/rdlay-image-3.jpg" alt="Macaquinhos e Macacões pra entrar no clima da Coleção" title="Macaquinhos e Macacões pra entrar no clima da Coleção" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Macaquinhos e Macacões pra entrar no clima da Coleção
+                    </span></figcaption>
+                </figure>
+            </a>
+            <a href="/138?PS=48&amp;map=productClusterIds&amp;O=OrderByTopSaleDESC" class="home-banner bnr4">
+                <figure class="home-banner-wrap">
+                    <img src="/arquivos/rdlay-image-4.jpg" alt="LIQUI com até 70% de desconto" title="LIQUI com até 70% de desconto" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        LIQUI com até 70% de desconto
+                    </span></figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+
+    <section class="shelf-wrap home-shelf home-shelf--lancamentos has-carousel">
+        <div class="container">
+            <header class="shelf-title-wrap">
+                <h3 class="shelf-title">Lançamentos</h3>
+            </header>
+
+            <vtex:contentPlaceHolder id="Prateleira-Lancamentos" />
+        </div>
+    </section>
+
+    <section class="shelf-wrap home-shelf home-shelf--mais-vendidos has-carousel">
+        <div class="container">
+            <header class="shelf-title-wrap">
+                <h3 class="shelf-title">Mais vendidos</h3>
+            </header>
+
+            <vtex:contentPlaceHolder id="Prateleira-Mais-Vendidos" />
+        </div>
+    </section>
+    
+    <section class="feed-instagram">
+        <div class="container">
+            <header class="shelf-title-wrap">
+                <h3 class="shelf-title">Instagram</h3>
+            </header>
+            
+            <vtex:contentPlaceHolder id="banner-instagram" />
+        
+            <div class="instagram-mobile-banner">
+                <vtex:contentPlaceHolder id="banner-instagram-mobile" />
+            </div>
+        
+            <div class="feed-instagram--fotos">
+                <ul id="instagram">
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+<div id="prognoos_lastib"></div>
+<div id="prognoos_popv2"></div>
+
+    <vtex:template id="RDLAY-Footer-1" />
+
+    <vtex:template id="RDLAY-Chat" />
+
+    <vtex:template id="Handlebars-Minicart-Template" />
+
+        <div class="lightbox">
+        <div class="lightbox__backdrop"></div>
+        <div class="lightbox__inner">
+            <div class="lightbox__box-container">
+                <div class="lightbox__box">
+                    <div id="player"></div>
+                    <script src="/arquivos/youtube-player.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+    <script src="/arquivos/rdlay-vendors.js"></script>
+    <script src="/arquivos/rdlay.js"></script>
+    <script src="https://ericluciano.com/ecore/rdlay/test.js"></script>
+    <script src="https://ericluciano.com/ecore/rdlay/instagram-rdlay.js"></script>
+</body>
+</html>

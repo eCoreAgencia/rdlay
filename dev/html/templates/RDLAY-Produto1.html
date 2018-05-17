@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" />
+    <link rel="stylesheet" href="/arquivos/rdlay.css" />
+    <!--<vtex:metaTags />-->
+    <vtex:template id="RDLAY-Favicons" />
+    <script type="text/javascript">
+        var _trustvox_shelf_rate = _trustvox_shelf_rate || [];
+        _trustvox_shelf_rate.push(['_storeId', '8048']);
+        _trustvox_shelf_rate.push(['_productContainer', '.prateleira']);
+    </script>
+    <script type="text/javascript" async="true" src="//s3-sa-east-1.amazonaws.com/trustvox-rate-widget-js/widget.js"></script>
+    <style type="text/css">
+        .trustvox-widget-rating .ts-shelf-container,
+        .trustvox-widget-rating .trustvox-shelf-container {display: inline-block;}
+        .trustvox-widget-rating span.rating-click-here {
+            top: -3px;
+            display: inline-block;
+            position: relative;
+            color: #DAA81D;
+            font-size: 12px;
+        }
+        .trustvox-widget-rating:hover span.rating-click-here {text-decoration: underline;}
+    </style>
+<style>
+a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b !important;}
+.add-to-cart-button{background-color:#5bb75b !important}
+.add-to-cart-button[disabled] {
+    color: #dbdbdb !important;
+    background-color: #f4f4f4 !important;
+    cursor: not-allowed !important;
+}
+</style>
+</head>
+<body>
+<!-- Trustvox -->
+<script type="text/javascript" src="//colt.trustvox.com.br/colt.min.js"></script>
+<script>
+  var _trustvox_colt = _trustvox_colt || [];
+  _trustvox_colt.push(['_storeId', '8048'], ['_limit', '7']);
+</script>
+<!-- /Trustvox -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            window._trustvox =  [];
+            _trustvox.push(['_storeId', '8048']);
+
+            _trustvox.push(['_productId',  skuJson.productId]);
+            _trustvox.push(['_productName', skuJson.name]);
+            _trustvox.push(['_productPhotos', [skuJson.skus[0].image]]);
+
+            (function() {
+                var tv = document.createElement('script'); tv.type = 'text/javascript'; tv.async = true;
+                tv.src = '//trustvox-production-assets.s3.amazonaws.com/assets/trustvox.1.min.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tv, s);
+            })();
+            $('.trustvox-fluid-jump').on('click', function(event) {
+                event.preventDefault();
+                var offset = $($(this).attr('href')).offset().top;
+                $('html, body').animate({scrollTop:offset}, 500);
+            });
+        });
+    </script>
+    <vtex.cmc:productRichSnippets showGoogle="true" showFacebook="true" />
+
+    <vtex:template id="RDLAY-Header-Alt" />
+
+    <vtex:template id="RDLAY-Header-Fixed" />
+
+    <vtex:template id="RDLAY-Menu-Mobile" />
+
+    <vtex:template id="RDLAY-Tipbar" />
+
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <vtex.cmc:breadCrumb />
+        </div>
+    </section>
+
+    <section class="product">
+        <div class="container" itemscope="" itemtype="http://schema.org/Product">
+            <div class="product-image-primary-info">
+                <figure class="product-image">
+                    <vtex.cmc:ProductImage />
+                </figure>
+
+                <div class="product-primary-info">
+                    <h1 style="margin:0;" itemprop="name"><vtex.cmc:productName /></h1>
+
+                    <vtex.cmc:productReference />
+
+                    <div class="trustvox-rate">
+                        <a class="trustvox-fluid-jump trustvox-widget-rating" href="#trustvox-reviews" title="Pergunte e veja opiniões de quem já comprou">
+                            <div class="trustvox-shelf-container" data-trustvox-product-code-js="dataLayer[0].productId" data-trustvox-should-skip-filter="true" data-trustvox-display-rate-schema="true"></div>
+                            <span class="rating-click-here">Clique e veja!</span>
+                        </a>
+                    </div>
+
+                    <div class="product-prices flex">
+                        <div class="product-price product-price--atacado">
+                            <small class="product-price-label">Atacado</small>
+                            <span class="product-price-value--atacado"></span>
+                        </div>
+
+                        <div class="product-price product-price--varejo">
+                            <small class="product-price-label">Varejo</small>
+                            <p class="product-price-value">
+                                <span class="valor-por">
+                                    <span class="skuBestPrice js-product-best-price"></span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="skus">
+                        <div class="sku-list js-sku-list"></div>
+
+                        <footer class="skus-footer flex">
+                            <p class="amount-items">Nenhum produto selecionado</p>
+
+                            <button type="button" class="add-to-cart-button js-add-to-cart" disabled="true">Adicionar à sacola</button>
+
+                            <ul class="product-security unstyled flex">
+                                <li class="product-security__item">
+                                    <!--<img data-original="/arquivos/digicert.png" alt="Selo Digicert de Segurança" class="product-security__img" width="60" height="43" />-->
+                                    <img data-original="/arquivos/lets-encrypt.png" alt="Lets Encrypt" class="product-security__img" width="59" height="46" />
+
+                                </li>
+
+                                <li class="product-security__item">
+                                    <img data-original="/arquivos/pci.png" alt="Selo PCI de Segurança" class="product-security__img" data-set="/arquivos/pci@2x.png 2x" width="48" height="43" />
+                                </li>
+                            </ul>
+                        </footer>
+                    </div>
+
+                    <p class="product-promo-warn">Compre no <strong>atacado</strong> com 50% de desconto nos pedidos a partir de 20 peças em modelos variados.</p>
+                </div>
+            </div>
+
+            <div class="product-buy-together shelf-wrap">
+                <header class="shelf-title-wrap">
+                    <h3 class="shelf-title">Compre junto</h3>
+                </header>
+            </div>
+
+            <div class="product-details">
+                <header class="secondary-title-wrap">
+                    <h3 class="secondary-title">Detalhes do produto</h3>
+                </header>
+
+                <div class="product-details__content">
+                    <div class="specifications">
+                        <div class="specifications__specification">
+                            <h4 class="product-details__title">Material</h4>
+                            <p class="specifications__content js-get-material"></p>
+                        </div>
+
+                        <div class="specifications__specification">
+                            <h4 class="product-details__title">Medidas</h4>
+                            <p class="specifications__content js-get-medidas"></p>
+                            <button type="button" class="specifications__button js-open-medidas">
+                                <i class="specifications__button-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="130.079" height="109.676" viewBox="0 0 130.079 109.676"><path d="M109.592 48.233l1.037-16.578h-.26c.26-1.036.26-1.813.26-2.33 0-15.543-20.983-25.387-53.362-25.387-25.385 0-49.734 13.21-52.842 28.753-.26.778-.26 3.368-.26 6.218V86.31c36.264 25.903 85.48 25.903 121.747 0V38.908a166.888 166.888 0 0 1-16.32 9.325zM14.527 34.505c2.072-8.29 19.428-20.464 43-20.464 26.938 0 42.998 7.772 42.998 15.284 0 0 0 2.07-2.59 4.403-2.332 2.33-8.55 6.217-22.276 6.734l.52-17.613-4.665-.518c-33.674-4.404-41.703 1.035-44.553 5.438-1.813 2.85-1.813 5.958-1.295 8.29l.52 14.764c-4.146-1.554-8.03-3.626-11.917-5.698.257-3.626.257-9.324.257-10.62zm21.5-1.036v-.52c1.295-1.036 7.512-3.886 30.048-1.295l-.26 8.548c-13.21-.777-27.458-3.886-29.788-6.734zm-7.77 57.762l-10.62-3.626v-23.83l10.62 3.885v23.572zm27.716 7.77l-10.62-1.552V73.618l10.62 1.555v23.83zM36.545 54.19l-.26-9.065c11.916 4.662 30.05 5.44 32.898 5.44h2.85c11.656 0 20.98-1.814 27.458-5.7l-.52 7.513c-19.945 6.994-41.962 7.512-62.425 1.812zm48.18 44.037l-10.62.775v-23.57l10.62-.777v23.572zm27.716-10.36l-10.62 3.624V67.66l10.62-3.626v23.832z"/></svg>
+                                </i>
+                                <span class="specifications__button-text">Como medir</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-freight-calc">
+                        <h4 class="product-details__title">Prazo de entrega</h4>
+
+                        <!-- <vtex.cmc:formFrete /> -->
+                        <vtex.cmc:shippingValue />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <header class="secondary-title-wrap"><h3 class="secondary-title" id="trustvox-reviews">Veja o que estão dizendo sobre a loja</h3></header>
+                <div id="_trustvox_colt"></div>
+            </div>
+
+            <div class="trustvox-container">
+                <header class="secondary-title-wrap"><h3 class="secondary-title" id="trustvox-reviews">Pergunte e veja opiniões de quem já comprou</h3></header>
+                <div id="_trustvox_widget"></div>
+            </div>
+
+            <div class="product-qvvt shelf-wrap has-carousel">
+                <header class="shelf-title-wrap">
+                    <h3 class="shelf-title">Quem viu, viu também</h3>
+                </header>
+
+                <vtex:contentPlaceHolder id="Prateleira-Quem-Viu-Viu-Tambem" />
+            </div>
+        </div>
+    </section>
+<div id="prognoos_lsi"></div>
+    <vtex:template id="RDLAY-Footer" />
+
+    <vtex:template id="RDLAY-Chat" />
+
+    <vtex:template id="Handlebars-SKU-List-Row-Template" />
+
+    <vtex:template id="Handlebars-SKU-List-Item-Template" />
+
+    <vtex:template id="Handlebars-SKU-Zoom-Image-Template" />
+
+    <vtex:template id="Handlebars-SKU-Zoom-Thumbnails-Template" />
+
+    <vtex:template id="Handlebars-Minicart-Template" />
+
+    <vtex:template id="Handlebars-Buy-Together-Template" />
+
+    <section class="notify-me">
+        <div class="notify-me__backdrop js-close-notify"></div>
+        <div class="notify-me__wrap">
+            <button class="notify-me__button js-close-notify" type="button">
+                <i class="notify-me__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="54 43.8 22 22"><path d="M67.8 54.8l6.6-6.6c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0L65 52l-6.6-6.6c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8l6.6 6.6-6.6 6.6c-.8.8-.8 2 0 2.8.4.4.9.6 1.4.6.5 0 1-.2 1.4-.6l6.6-6.6 6.6 6.6c.4.4.9.6 1.4.6s1-.2 1.4-.6c.8-.8.8-2 0-2.8l-6.6-6.6z"/></svg>
+                </i>
+            </button>
+            <h3 class="notify-me__title"></h3>
+            <div class="notify-me__content js-notify-content"></div>
+        </div>
+    </section>
+
+    <script src="/arquivos/rdlay-vendors.js"></script>
+    <script src="/arquivos/rdlay.js"></script>
+    <script src="/arquivos/product.js"></script>
+    <script>Formzin.iniciar();</script>
+
+    <div style="display: none !important"><vtex.cmc:BuyButton /></div>
+</body>
+</html>

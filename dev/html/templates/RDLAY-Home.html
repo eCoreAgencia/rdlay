@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="XdPVh6CnBwMvD29gueAKByBDXGd3uvLviSYPHlc5Ol4" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" />
+    <link rel="stylesheet" href="/arquivos/rdlay.css" />
+    <vtex:metaTags />
+    <vtex:template id="RDLAY-Favicons" />
+    <script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', 'aa0d577441df5e655b9d8b6a129037708a2879f7');
+</script>
+<meta name="google-site-verification" content="t6SgXZK8K3qFn5zBpra6CubFy8KFPfWLKm2kqAUkpF8" />
+<style>.home-banner-text{font-size:2em;}</style>
+</head>
+<body>
+    <vtex:template id="RDLAY-Header" />
+
+    <vtex:template id="RDLAY-Header-Fixed" />
+
+    <vtex:template id="RDLAY-Menu-Mobile" />
+
+    <section class="slider hidden-xs">
+        <vtex:contentPlaceHolder id="Slider-Desktop" />
+    </section>
+
+    <section class="slider slider--mobile visible-xs">
+        <vtex:contentPlaceHolder id="Slider-Mobile" />
+    </section>
+
+    <vtex:template id="RDLAY-Tipbar" />
+
+    <section class="home-secondary-banner">
+        <div class="container hidden-xs">
+            <vtex:contentPlaceHolder id="Banner-Promo-Desktop" />
+        </div>
+
+        <div class="container visible-xs">
+            <vtex:contentPlaceHolder id="Banner-Promo-Mobile" />
+        </div>
+    </section>
+
+    <section class="home-banners">
+        <div class="container flex">
+            <a href="/liqui" class="home-banner is-first">
+                <figure class="home-banner-wrap" style="background-color: #92a9d1; height: 100%;">
+                    <img src="/arquivos/banner-home-liqui.jpg" alt="Liquidação" title="Liquidação" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Liqui
+                    </span></figcaption>
+                </figure>
+            </a>
+            <a href="/vestidos/curto" class="home-banner">
+                <figure class="home-banner-wrap" style="background-color: #92a9d1; height: 100%;">
+                    <img src="/arquivos/banner-home-vestidos.jpg" alt="Vestidos para arrasar no verão" title="Vestidos para arrasar no verão" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Vestidos para arrasar no verão
+                    </span></figcaption>
+                </figure>
+            </a>
+            <a href="/mae%20e%20filha" class="home-banner">
+                <figure class="home-banner-wrap" style="background-color: #92a9d1; height: 100%;">
+                    <img src="/arquivos/banner-home-maeefilha.jpg" alt="Look para Mãe e Filha" title="Look para Mãe e Filha" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Look para Mãe e Filha
+                    </span></figcaption>
+                </figure>
+            </a>
+            <a href="/tops/underwear" class="home-banner">
+                <figure class="home-banner-wrap" style="background-color: #92a9d1; height: 100%;">
+                    <img src="/arquivos/banner-home-bodys.jpg" alt="Body a sensação do verão" title="Body a sensação do verão" class="home-banner-img" />
+                    <figcaption class="home-banner-caption"><span class="home-banner-text">
+
+                        Body a sensação do verão
+                    </span></figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+
+    <section class="shelf-wrap home-shelf home-shelf--lancamentos has-carousel">
+        <div class="container">
+            <header class="shelf-title-wrap">
+                <h3 class="shelf-title">Lançamentos</h3>
+            </header>
+
+            <vtex:contentPlaceHolder id="Prateleira-Lancamentos" />
+        </div>
+    </section>
+
+    <section class="shelf-wrap home-shelf home-shelf--mais-vendidos has-carousel">
+        <div class="container">
+            <header class="shelf-title-wrap">
+                <h3 class="shelf-title">Mais vendidos</h3>
+            </header>
+
+            <vtex:contentPlaceHolder id="Prateleira-Mais-Vendidos" />
+        </div>
+    </section>
+<div id="prognoos_lastib"></div>
+<div id="prognoos_popv2"></div>
+
+    <vtex:template id="RDLAY-Footer" />
+
+    <vtex:template id="RDLAY-Chat" />
+
+    <vtex:template id="Handlebars-Minicart-Template" />
+
+        <div class="lightbox">
+        <div class="lightbox__backdrop"></div>
+        <div class="lightbox__inner">
+            <div class="lightbox__box-container">
+                <div class="lightbox__box">
+                    <div id="player"></div>
+                    <script src="/arquivos/youtube-player.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/arquivos/rdlay-vendors.js"></script>
+    <script src="/arquivos/rdlay.js"></script>
+</body>
+</html>

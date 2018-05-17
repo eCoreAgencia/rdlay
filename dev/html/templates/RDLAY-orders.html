@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>R.D.Lay | Meus Pedidos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" />
+    <link rel="stylesheet" href="/arquivos/rdlay.css" />
+    <vtex:metaTags />
+    <vtex:template id="RDLAY-Favicons" />
+</head>
+<body>
+    <vtex:template id="RDLAY-Header-Alt" />
+
+    <vtex:template id="RDLAY-Header-Fixed" />
+
+    <vtex:template id="RDLAY-Menu-Mobile" />
+
+    <vtex:template id="RDLAY-Tipbar" />
+
+    <section class="rdlay">
+        <section class="order-list">
+            <div class="container">
+
+                <vtex.cmc:orderList/>
+            </div>
+        </section>
+    </section>
+
+    <vtex:template id="RDLAY-Footer" />
+
+    <vtex:template id="RDLAY-Chat" />
+
+    <vtex:template id="Handlebars-Minicart-Template" />
+
+    <script src="/arquivos/rdlay-vendors.js"></script>
+    <script src="/arquivos/rdlay.js"></script>
+    <script>
+    $(function(){
+        $("body").append("<style>@import url(/arquivos/rdlay.css);body *{font-size:14px !important}</style>");
+        $(".page-header").html('').attr('style', 'margin-top:20px');
+    });
+    </script>
+</body>
+</html>
