@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>R.D.Lay | Lojas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" />
+    <link rel="stylesheet" href="/arquivos/rdlay.css" />
+    <vtex:metaTags />
+    <vtex:template id="RDLAY-Favicons" />
+</head>
+<body>
+    <vtex:template id="RDLAY-Header-Alt" />
+
+    <vtex:template id="RDLAY-Header-Fixed" />
+
+    <vtex:template id="RDLAY-Menu-Mobile" />
+
+    <section class="container-lojas">
+        <div class="container">
+            <hr class="hr-top hidden-xs" />
+
+            <div class="lojas-wrap flex">
+                <vtex:template id="RDLAY-Nav-Institucional" />
+
+                <div class="lojas-content">
+                    <h1 class="lojas__main-title">Lojas</h1>
+
+                    <hr class="hr-top hr-top--lojas" />
+
+                    <div class="lojas">
+                        <div class="loja flex"></div>
+
+                        <div class="lojas__list flex"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <vtex:template id="RDLAY-Footer" />
+
+    <vtex:template id="RDLAY-Chat" />
+
+    <vtex:template id="Handlebars-Minicart-Template" />
+
+    <script type="text/x-handlebars-template" id="loja-template">
+        <div class="loja__info flex">
+            <h3 class="loja__title">{{local}}</h3>
+
+            <p class="loja__text loja__text--endereco">
+                <strong class="is-block">Endereço</strong>
+                {{endereco}}
+                <br />
+                {{complemento}}
+            </p>
+
+            {{#if telefone}}
+                <p class="loja__text">
+                    <strong>Telefone:</strong> {{telefone}}
+                </p>
+            {{/if}}
+
+            <p class="loja__text">
+                <strong class="is-block">Horário de Funcionamento</strong>
+                Segunda à Sexta-feira, {{horario_semana}}
+                <br />
+                Sábados, {{horario_sabado}}
+            </p>
+        </div>
+
+        <div class="loja__mapa">
+            <div id="map"></div>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="lojas-template">
+        {{#each Lojas}}
+            <div class="lojas__item">
+                <h4 class="lojas__title">{{local}}</h4>
+                <p class="lojas__text">{{endereco}}</p>
+                <button class="lojas__button js-select-loja" type="button" data-id="{{id}}">Detalhes</button>
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="/arquivos/rdlay-vendors.js"></script>
+    <script src="/arquivos/rdlay.js"></script>
+    <script src="/arquivos/lojas.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJMPQWjtP1PoHPARob13tMuvNd-WPX5yQ"></script>
+</body>
+</html>
