@@ -1,0 +1,315 @@
+
+.barra-lateral-beneficios  {
+    transition: right .2s;
+    position: fixed;
+    bottom: -5px;
+    right: -180px;
+    width: 235px;
+    height: 272px;
+    z-index: 20
+}
+
+.barra-lateral-beneficios .barra-header {
+    position: relative;
+    height: 35px;
+    background: #000;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.barra-lateral-beneficios .barra-header button {
+    transition: translateX .2s;
+    width: 20px;
+    height: 100%;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    -webkit-transform: rotate(180deg) translateX(-25px);
+    -ms-transform: rotate(180deg) translateX(-25px);
+    transform: rotate(180deg) translateX(-25px);
+    margin-top: 2px
+}
+
+.barra-lateral-beneficios .barra-header button svg {
+    width: 25px;
+    height: 25px;
+    fill: #FFF
+}
+
+.barra-lateral-beneficios .barra-header button.-close {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.barra-lateral-beneficios .itens {
+    background: #f1f1f1;
+    padding: 24px 0
+}
+
+.barra-lateral-beneficios .itens .item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    background: 0 0
+}
+
+.barra-lateral-beneficios .itens .item:last-child {
+    margin-bottom: 0
+}
+
+.barra-lateral-beneficios .itens .item .icon {
+    width: 28px;
+    height: 20px;
+    margin-right: 15px
+}
+
+.barra-lateral-beneficios .itens .item .title {
+    font-size: 11px;
+    color: #333;
+    text-transform: none;
+    display: inline
+}
+
+.barra-lateral-beneficios .itens .item .title span {
+    text-transform: none
+}
+
+.barra-lateral-beneficios .itens .item.-troca {
+    margin-bottom: 12px
+}
+
+.barra-lateral-beneficios .itens .item.-desconto .icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios .itens .item.-troca .icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios .itens .item.-frete .icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios .itens .item.-presente .icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios .itens .item.-ajuda .icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios .itens .item.-televendas .icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios .itens.-bottom {
+    position: relative;
+    margin-top: -5px
+}
+
+.barra-lateral-beneficios .itens.-bottom:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 205px);
+    height: 1px;
+    background: #cbcbcb;
+    margin-left: 15px
+}
+
+.barra-lateral-beneficios.-open {
+    right: 0
+}
+
+.barra-lateral-beneficios.-open .barra-header {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.barra-lateral-beneficios.-open .barra-header button {
+    -webkit-transform: rotate(0) translateX(-20px);
+    -ms-transform: rotate(0) translateX(-20px);
+    transform: rotate(0) translateX(-20px);
+    margin-top: 0
+}
+
+.barra-lateral-beneficios.-open .itens.-bottom:before {
+    width: calc(100% - 30px)
+}
+
+.barra-lateral-beneficios .force-out {
+    width: 100%;
+    height: 20px;
+    background: 0 0;
+    position: absolute;
+    bottom: 0
+}
+
+.barra-lateral-beneficios-hover {
+    transition: right .2s;
+    position: fixed;
+    bottom: -5px;
+    right: -255px;
+    width: 285px;
+    height: 272px;
+    z-index: 10;
+    background: #ddd
+}
+
+.barra-lateral-beneficios-hover.-open {
+    right: 235px
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .arrow {
+    position: absolute;
+    background-color: #f1f1f1;
+    right: -3px;
+    z-index: 16;
+    width: 5px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .arrow:before {
+    content: '';
+    color: transparent;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -7.5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 8px;
+    border-color: transparent transparent #f1f1f1;
+    line-height: 0
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 15px;
+    margin-left: 45px
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .icon.-desconto svg {
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .icon.-troca svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .icon.-frete svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .icon.-presente svg{
+    height: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .icon.-televendas svg{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item,
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .text {
+    width: 175px;
+    margin: 0 auto;
+    text-transform: none;
+    font-size: 11px;
+    color: #333;
+    line-height: 20px
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item .title,
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .text .title {
+    text-transform: none;
+    margin-bottom: 10px
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item .button,
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .text .button {
+    display: block;
+    border: none;
+    text-align: center;
+    margin-top: 10px;
+    padding: 13px 5px;
+    color: #333;
+    font-weight: 700;
+    background: #eee;
+    cursor: pointer
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item .text,
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .text.-televendas {
+    text-align: left
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item .button:hover,
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .text .button:hover {
+    background: #ba5357;
+    color: #FFF
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .text.-ajuda {
+    width: 205px;
+    line-height: 13px
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item {
+    margin-bottom: 25px
+}
+
+.barra-lateral-beneficios-hover .js-barra-hover-a-target-element .item:last-child {
+    margin-bottom: 0
+}
+
+.barra-lateral-beneficios .itens .item .title.-hovered,
+.recom .-cart-entrega-item:nth-child(2) a,
+.recom .contents>.item .col a,
+.rsv-mini-cart .show-more a,
+.rsv-mini-cart .show-more a span {
+    text-decoration: underline
+}

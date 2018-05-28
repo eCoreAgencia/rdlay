@@ -24,6 +24,7 @@
             font-size: 12px;
         }
         .trustvox-widget-rating:hover span.rating-click-here {text-decoration: underline;}
+        .product-price--atacado{display:none}
     </style>
 <style>
 a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b !important;}
@@ -37,7 +38,7 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
 </head>
 <body>
 <!-- Trustvox -->
-<script type="text/javascript" src="//colt.trustvox.com.br/colt.min.js"></script>
+<script type="text/javascript" src="//colt.trustvox.com.br/colt.min.js"></script> 
 <script>
   var _trustvox_colt = _trustvox_colt || [];
   _trustvox_colt.push(['_storeId', '8048'], ['_limit', '7']);
@@ -91,12 +92,16 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
                     <h1 style="margin:0;" itemprop="name"><vtex.cmc:productName /></h1>
 
                     <vtex.cmc:productReference />
-
+                    
                     <div class="trustvox-rate">
                         <a class="trustvox-fluid-jump trustvox-widget-rating" href="#trustvox-reviews" title="Pergunte e veja opiniões de quem já comprou">
                             <div class="trustvox-shelf-container" data-trustvox-product-code-js="dataLayer[0].productId" data-trustvox-should-skip-filter="true" data-trustvox-display-rate-schema="true"></div>
                             <span class="rating-click-here">Clique e veja!</span>
                         </a>
+                    </div>
+                    
+                    <div style="margin-top:20px;font-size:1.4em;">
+                        <vtex.cmc:ProductDescription/>
                     </div>
 
                     <div class="product-prices flex">
@@ -127,7 +132,7 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
                                 <li class="product-security__item">
                                     <!--<img data-original="/arquivos/digicert.png" alt="Selo Digicert de Segurança" class="product-security__img" width="60" height="43" />-->
                                     <img data-original="/arquivos/lets-encrypt.png" alt="Lets Encrypt" class="product-security__img" width="59" height="46" />
-
+                                    
                                 </li>
 
                                 <li class="product-security__item">
@@ -179,12 +184,12 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
                     </div>
                 </div>
             </div>
-
+            
             <div>
                 <header class="secondary-title-wrap"><h3 class="secondary-title" id="trustvox-reviews">Veja o que estão dizendo sobre a loja</h3></header>
                 <div id="_trustvox_colt"></div>
             </div>
-
+            
             <div class="trustvox-container">
                 <header class="secondary-title-wrap"><h3 class="secondary-title" id="trustvox-reviews">Pergunte e veja opiniões de quem já comprou</h3></header>
                 <div id="_trustvox_widget"></div>
@@ -215,7 +220,7 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
     <vtex:template id="Handlebars-Minicart-Template" />
 
     <vtex:template id="Handlebars-Buy-Together-Template" />
-
+    
     <section class="notify-me">
         <div class="notify-me__backdrop js-close-notify"></div>
         <div class="notify-me__wrap">
@@ -231,7 +236,8 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
 
     <script src="/arquivos/rdlay-vendors.js"></script>
     <script src="/arquivos/rdlay.js"></script>
-    <script src="/arquivos/product.js"></script>
+    <!--<script src="/arquivos/product.js"></script>-->
+    <script src="/arquivos/product2.js"></script>
     <script>Formzin.iniciar();</script>
 
     <div style="display: none !important"><vtex.cmc:BuyButton /></div>
