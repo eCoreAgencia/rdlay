@@ -77,7 +77,7 @@
 }
 
 .barra-lateral-beneficios .itens .item .title {
-    font-size: 11px;
+    font-size: 12px;
     color: #333;
     text-transform: none;
     display: inline
@@ -258,7 +258,7 @@
     width: 175px;
     margin: 0 auto;
     text-transform: none;
-    font-size: 11px;
+    font-size: 12px;
     color: #333;
     line-height: 20px
 }

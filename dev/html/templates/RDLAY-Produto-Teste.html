@@ -250,7 +250,7 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
             // Open Modal //
             // Open Modal //
                 $('.js-open-medidas').click(function() {
-                    $('.tabelas').fadeIn(200);
+                    $('.modal').fadeIn(200);
                     $('.bg_modal').fadeIn(600);
                     $('body').addClass('modal_active');
                 });
@@ -258,18 +258,21 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
 
                 // Close Modal //
                 $('.close_modal, .bg_modal').click(function() {
-                    $('.tabelas').fadeOut(600);
+                    $('.modal').fadeOut(600);
                     $('.bg_modal').fadeOut(600);
                     $('body').removeClass('modal_active');
                     $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
                 });
                 $(document).keyup(function(ev) {
                     if (ev.keyCode == 27)
-                        $('.tabelas').fadeOut(500);
+                        $('.modal').fadeOut(500);
                         $('.bg_modal').fadeOut(600);
                     $('body').removeClass('modal_active');
                     $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
-                    $('#parcelamentoModal').removeClass('active');
+                });
+
+                $(".js-open-medidas").click(function() {
+                    $(".modal").toggleClass("active");
                 });
             // Close Modal //
         // Scripts Modal //
