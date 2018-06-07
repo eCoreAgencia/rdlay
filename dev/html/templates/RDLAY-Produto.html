@@ -207,6 +207,16 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
 <div id="prognoos_lsi"></div>
     <vtex:template id="RDLAY-Footer" />
 
+    <!-- Modal medidas -->
+    <div class="modal hidden-xs hidden-sm">
+        <div class="opacity"></div>
+        <span class="close-modal">X</span>
+        <div class="modal-container">
+            <img src="/arquivos/tabela_de_medidas.jpg" />
+        </div>
+    </div>
+    <!-- modal END -->
+
     <vtex:template id="RDLAY-Chat" />
 
     <vtex:template id="Handlebars-SKU-List-Row-Template" />
@@ -239,6 +249,38 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
     <!--<script src="/arquivos/product.js"></script>-->
     <script src="/arquivos/product2.js"></script>
     <script>Formzin.iniciar();</script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // Scripts Modal //
+
+            // Open Modal //
+            $('.js-open-medidas').click(function() {
+                $('.modal').fadeIn(200);
+                $('.opacity').fadeIn(600);
+                $('body').addClass('modal_active');
+            });
+            // Open Modal //
+
+            // Close Modal //
+            $('.close-modal, .opacity').click(function() {
+                $('.modal').fadeOut(600);
+                $('.opacity').fadeOut(600);
+                $('body').removeClass('modal_active');
+                $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
+            });
+            $(document).keyup(function(ev) {
+                if (ev.keyCode == 27)
+                    $('.modal').fadeOut(500);
+                    $('.opacity').fadeOut(600);
+                $('body').removeClass('modal_active');
+                $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
+            });
+            // Close Modal //
+
+        // Scripts Modal //
+        });
+    </script>
 
     <div style="display: none !important"><vtex.cmc:BuyButton /></div>
 </body>

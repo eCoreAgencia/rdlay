@@ -3445,7 +3445,8 @@ body.depCatBus .prateleira ul {
 .shelf-product__name {
     font-size: 9px;
     font-size: .9rem;
-    text-transform: uppercase
+    text-transform: uppercase;
+    text-align: center
 }
 
 .has-carousel .shelf-product__name {
@@ -3505,13 +3506,13 @@ body.depCatBus .prateleira ul {
 
 .shelf-product__price-value--varejo {
     font-size: 11px;
-    font-size: 1.1rem;
+    font-size: 2.2rem;
     line-height: 1.2
 }
 
 .has-carousel .shelf-product__price-value--varejo {
     font-size: 16px;
-    font-size: 1.6rem
+    font-size: 2.2rem
 }
 
 .shelf-product__price-value--varejo-old {

@@ -247,34 +247,31 @@ a.minicart__button{background-color:#5bb75b !important;border:1px solid #5bb75b 
     <script type="text/javascript">
         $(document).ready(function(){
         // Scripts Modal //
-            // Open Modal //
-            // Open Modal //
-                $('.js-open-medidas').click(function() {
-                    $('.modal').fadeIn(200);
-                    $('.bg_modal').fadeIn(600);
-                    $('body').addClass('modal_active');
-                });
-                // Open Modal //
 
-                // Close Modal //
-                $('.close_modal, .bg_modal').click(function() {
-                    $('.modal').fadeOut(600);
-                    $('.bg_modal').fadeOut(600);
-                    $('body').removeClass('modal_active');
-                    $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
-                });
-                $(document).keyup(function(ev) {
-                    if (ev.keyCode == 27)
-                        $('.modal').fadeOut(500);
-                        $('.bg_modal').fadeOut(600);
-                    $('body').removeClass('modal_active');
-                    $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
-                });
+            // Open Modal //
+            $('.js-open-medidas').click(function() {
+                $('.modal').fadeIn(200);
+                $('.opacity').fadeIn(600);
+                $('body').addClass('modal_active');
+            });
+            // Open Modal //
 
-                $(".js-open-medidas").click(function() {
-                    $(".modal").toggleClass("active");
-                });
             // Close Modal //
+            $('.close-modal, .opacity').click(function() {
+                $('.modal').fadeOut(600);
+                $('.opacity').fadeOut(600);
+                $('body').removeClass('modal_active');
+                $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
+            });
+            $(document).keyup(function(ev) {
+                if (ev.keyCode == 27)
+                    $('.modal').fadeOut(500);
+                    $('.opacity').fadeOut(600);
+                $('body').removeClass('modal_active');
+                $('.modal_loader').remove(); // remove o conteudo do modal ao fechar
+            });
+            // Close Modal //
+
         // Scripts Modal //
         });
     </script>
