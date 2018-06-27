@@ -3,7 +3,7 @@ var lojas = {
         this.getLojas(shopId)
     },
     getLojas: function (shopId) {
-        requestUrl = "https://rdlay.vtexcommercestable.com.br/api/dataentities/LJ/search?_fields=id,local,endereco,complemento,telefone,horario_semana,horario_sabado,latitude,longitude&_sort=local", shopId ? requestUrl += "&id=" + shopId : requestUrl += "&_sort=local", $.ajax({
+        requestUrl = "/api/dataentities/LJ/search?_fields=id,local,endereco,complemento,telefone,horario_semana,horario_sabado,latitude,longitude&_sort=local", shopId ? requestUrl += "&id=" + shopId : requestUrl += "&_sort=local", $.ajax({
             url: requestUrl,
             type: "GET",
             headers: {
