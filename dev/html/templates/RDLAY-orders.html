@@ -17,11 +17,11 @@
     <vtex:template id="RDLAY-Menu-Mobile" />
 
     <vtex:template id="RDLAY-Tipbar" />
-
+    
     <section class="rdlay">
         <section class="order-list">
-            <div class="container">
-
+            <div class="container" style="display:table;">
+                
                 <vtex.cmc:orderList/>
             </div>
         </section>
@@ -33,11 +33,12 @@
 
     <vtex:template id="Handlebars-Minicart-Template" />
 
-    <script src="/arquivos/rdlay-vendors.js"></script>
-    <script src="/arquivos/rdlay.js"></script>
+    <!-- <script src="/arquivos/rdlay-vendors.js"></script>
+    <script src="/arquivos/rdlay.js"></script> -->
+
     <script>
     $(function(){
-        $("body").append("<style>@import url(/arquivos/rdlay.css);body *{font-size:14px !important}</style>");
+        $("body").append("<style>@import url(/arquivos/rdlay.css);body *{font-size:13px !important}</style>");
         $(".page-header").html('').attr('style', 'margin-top:20px');
     });
     </script>

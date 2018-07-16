@@ -1,0 +1,132 @@
+.feed-instagram--title:after,
+.feed-instagram--title:before{
+    content: '';
+    clear: both;
+    width: 100%;
+    display: block
+}
+/* section {
+    display: block
+} */
+
+.collection-title,
+.feed-instagram--title {
+    position: relative;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 35px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.collection-title span,
+.feed-instagram--title span {
+    background: #fff;
+    padding: 0 20px 3px 12px
+}
+
+.collection-title span:before,
+.feed-instagram--title span:before {
+    content: "//";
+    color: #fa1392;
+    font-weight: 800;
+    margin-right: 3px
+}
+
+.collection-title:after,
+.feed-instagram--title:after {
+    content: '';
+    display: block;
+    position: relative;
+    background: #fa1392;
+    height: 1px;
+    width: 100%;
+    top: -13px;
+    z-index: -1
+}
+
+.feed-instagram {
+    margin-bottom: 40px;
+    overflow: hidden
+}
+
+.feed-instagram .box-banner {
+    width: 320px;
+    float: left
+}
+
+.feed-instagram .instagram-mobile-banner {
+    display: none
+}
+
+.feed-instagram .instagram-mobile-banner .box-banner {
+    float: none;
+    margin: 0 auto
+}
+
+.feed-instagram .instagram-mobile-banner .box-banner img {
+    width: 100%;
+    height: auto
+}
+
+.feed-instagram .feed-instagram--title {
+    padding: 26px 0 0;
+    color: #000;
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase
+}
+
+.feed-instagram .feed-instagram--title a {
+    font-weight: 700;
+    font-style: italic;
+    color: #000
+}
+
+.feed-instagram .feed-instagram--title a:hover {
+    color: #3f172c
+}
+
+.feed-instagram #instagram {
+    float: right;
+    width: 880px;
+    padding: 0;
+    overflow: hidden;
+    max-height: 440px;
+    margin-top:0;
+}
+
+.feed-instagram #instagram li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    height: 220px
+}
+
+.feed-instagram #instagram li img {
+    display: block;
+    width: 130%;
+    height: auto
+}
+
+@media (max-width:520px) {
+    .instagram-mobile-banner .box-banner {
+        width: 100%
+    }
+}
+
+@media (max-width:1200px) {
+    .feed-instagram .feed-instagram--fotos,
+    .feed-instagram .feed-instagram--title,
+    .feed-instagram .feed-instagram--title+.box-banner {
+        display: none;
+    }
+    .feed-instagram .instagram-mobile-banner {
+        display: block;
+    }
+}

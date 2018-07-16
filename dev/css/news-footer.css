@@ -1,0 +1,77 @@
+.newsFooter form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* flex: 1; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+.newsFooter form h5 {
+width: 100%;
+max-width: 518px;
+min-width: 320px;
+font-size: 3.4rem;
+font-weight: normal;
+text-transform: initial;
+display: inline;
+}
+.newsFooter form h5 svg {
+  margin-right:5px;
+  vertical-align: middle;
+  margin-top:-5px;
+}
+.newsFooter form h5 strong:before {
+    margin-left: 8px;
+}
+.newsFooter input {
+    border: 1px solid #000;
+    width: 100%;
+    max-width: 254px;
+    margin-right: 8px;
+    height: 60px;
+    font-size: 1.6rem !important;
+    color: #000 !important;
+}
+
+.newsFooter button {
+
+      font-size: 2rem !important;
+      height:60px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        margin-top:30px !important;
+    }
+}
+
+@media screen and (max-width: 990px) {
+  .newsFooter form {
+    flex-direction: column;
+  }
+  .newsFooter form h5{
+    text-align: center;
+    font-size:2.4rem;
+  }
+
+}
+
+@media screen and (min-width: 991px) {
+  .newsFooter form {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 796px) {
+  .newsFooter form h5 {
+    max-width: 280px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .newsFooter form h5 {
+    max-width: 518px;
+  }
+}
