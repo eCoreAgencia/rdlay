@@ -5469,7 +5469,8 @@ only screen and (min-resolution:192dpi) {
         padding-bottom: 20px
     }
     .header__main {
-        transition: margin-top .2s ease
+        transition: margin-top .2s ease;
+        height: 55px
     }
     .header__logo svg {
         max-width: 228px
