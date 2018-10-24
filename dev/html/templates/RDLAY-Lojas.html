@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <title>R.D.Lay | Lojas</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" />
-    <link rel="stylesheet" href="/arquivos/rdlay.css" />
+    <link rel="stylesheet" href="/arquivos/rdlay.css?v=1.0.0" />
     <vtex:metaTags />
     <vtex:template id="RDLAY-Favicons" />
 </head>
@@ -79,14 +79,16 @@
             <div class="lojas__item">
                 <h4 class="lojas__title">{{local}}</h4>
                 <p class="lojas__text">{{endereco}}</p>
-                <button class="lojas__button js-select-loja" type="button" data-id="{{id}}">Detalhes</button>
+                <button class="lojas__button js-select-loja" type="button" data-local="{{local}}">Detalhes</button>
             </div>
         {{/each}}
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="/arquivos/rdlay-vendors.js"></script>
     <script src="/arquivos/rdlay.js"></script>
-    <script src="/arquivos/lojas-v5.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyButeOrosgvj11gikRKNbX5hsIIiMy9SFw"></script>
+    <script src="/arquivos/lojas-v7.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6OyVvlNnVEao4xalC6LJYQzWrHe8TkNU"></script>
+
+
 </body>
 </html>
