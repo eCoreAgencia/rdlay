@@ -117,14 +117,14 @@ Handlebars.registerHelper("ifIsAtacado", function(items, options) {
     return items.forEach(function(item) {
         total += item.quantity
     }),
-    total >= 10 ? options.fn(this) : options.inverse(this)
+    total >= 20 ? options.fn(this) : options.inverse(this)
 }),
 Handlebars.registerHelper("howManyToDiscount", function(items) {
     var total = 0;
     return items.forEach(function(item) {
         total += item.quantity
     }),
-    10 - total
+    20 - total
 }),
 Handlebars.registerHelper("minicartTotals", function(totalizers) {
     var total = 0;
