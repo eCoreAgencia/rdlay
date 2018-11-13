@@ -1,173 +1,197 @@
-<header class="header" id="header">
-    <div class="header__top-shadow hidden-xs"></div>
+<style>
+    /*.minicart__promo-text{display:none !important}*/
+    p.flag.carnaval, p.flag.todos-os-produtos,
+    p.flag.liquidacao {
+        display:none !important;
+    }
+    /*
+    p.flag.novidades{}
+    p.flag.carnaval, p.flag.todos-os-produtos {
+        display:none;
+        background: url(/arquivos/flag-carnaval-balao1.png);
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: 40px 40px;
+        margin-top: 20px;
+        display: block;
+        color: transparent;
+    }*/
+    </style>
+    <header class="header" id="header">
+        <div class="header__top-shadow hidden-xs"></div>
 
-    <div class="to-front">
-        <div class="container">
-            <nav class="header__top flex hidden-xs">
-                <vtex.cmc:welcomeMessage />
+        <div class="to-front">
+            <div class="container">
+                <nav class="header__top flex hidden-xs">
+                    <vtex.cmc:welcomeMessage />
 
-                <ul class="header__top-menu unstyled">
-                    <li class="header__top-menu-item"><a href="/institucional/a-rdlay" class="header__top-menu-anchor">A RDLay</a></li>
-                    <li class="header__top-menu-item"><a href="/institucional/comprar-no-atacado" class="header__top-menu-anchor">Como comprar no atacado</a></li>
-                    <li class="header__top-menu-item"><a href="/lojas" class="header__top-menu-anchor">Lojas</a></li>
-                    <li class="header__top-menu-item"><a href="/institucional/multimarcas" class="header__top-menu-anchor">Multimarcas</a></li>
-                    <li class="header__top-menu-item"><a href="/institucional/fale-conosco" class="header__top-menu-anchor">Fale Conosco</a></li>
-                </ul>
-            </nav>
-
-            <div class="header__main flex">
-                <button class="header__mobile-menu-button visible-xs js-open-menu-mobile"><i class="burger"></i></button>
-
-                <a href="/" class="header__logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="710.034" height="215.414" viewBox="0 0 710.034 215.414"><path fill="#161211" d="M165.938 40.98c-6.763-9.01-16.697-16.57-29.55-22.46-13.452-6.39-27.403-9.61-41.48-9.61-6.014 0-12.003.575-17.77 1.773-10.332 2.146-18.992 6.49-25.755 12.903C44.345 30.25 40.8 37.512 40.8 45.2c0 11.254 7.164 19.815 21.364 25.43 1 .4 1.997.6 2.97.6 1.223 0 2.37-.3 3.444-.9 2.12-1.197 3.294-3.118 3.294-5.415 0-2.42-1.373-4.392-3.793-5.465l-.076-.025-.075-.05c-9.335-3.593-13.877-8.46-13.877-14.85 0-4.167 2.12-8.06 6.514-11.93 4.617-4.093 11.106-7.013 19.292-8.635a83.598 83.598 0 0 1 15.422-1.447c12.305 0 24.383 2.695 35.864 8.01 19.94 9.285 29.65 20.766 29.65 35.042 0 7.088-2.697 12.978-8.237 17.994-5.64 5.115-12.655 7.61-21.464 7.61-12.978 0-29.15-1.946-32.52-11.13-1.022-2.87-3.32-4.567-6.29-4.642 2.796-5.54 5.59-11.106 8.387-16.67 3.943-7.538 7.063-13.03 9.26-16.35l.05-.074.05-.05c1.52-2.546 1.247-5.416-.75-7.91-1.747-2.148-4.018-3.27-6.614-3.27-2.296 0-4.218 1.172-5.417 3.294-.374.698-2.895 5.64-20.265 40.555-9.933 19.74-18.843 34.59-26.505 44.1-7.76 9.458-15.298 14.4-22.412 14.624h-.398c-1.872 0-3.494-.623-4.992-1.92-2.196-1.873-2.196-3.395-2.196-3.87 0-.5.15-.923.425-1.372l.024-.074.05-.05c1.972-3.443 1.023-6.963-2.446-8.934l-.125-.074-.15-.076c-1.047-.475-2.096-.723-3.12-.723-1.996 0-3.793.922-5.09 2.645-1.474 1.922-2.222 4.518-2.222 7.71 0 5.02 1.623 9.41 4.842 13.105 3.694 4.293 8.885 6.488 15.324 6.488h.724c11.855-.548 22.736-6.786 32.32-18.517 6.938-8.486 14.2-19.84 21.613-33.767.898-1.772 1.822-3.544 2.745-5.316 1.597 8.96 6.415 19.442 14.55 31.82 11.43 17.12 22.662 25.457 34.316 25.457.55 0 1.098-.025 1.623-.05 11.28-.624 17.495-7.138 17.495-18.32 0-3.07 0-12.353-6.54-12.353-2.545 0-4.018 1.05-4.817 1.947-1.248 1.374-1.746 3.22-1.497 5.517v.025l.025.05c1.123 8.784-1.997 9.733-3.044 10.032l-.05.025h-.05l-.525.173c-.45.15-.874.3-1.297.45h-.275c-9.06 0-18.817-11.28-28.45-32.745 7.136 2.196 15.322 3.294 24.432 3.294 13.202 0 24.06-3.593 32.245-10.706 7.986-6.988 12.004-15.798 12.004-26.155.002-9.06-3.217-17.943-9.606-26.38zm175.374 4.193c-6.913-8.136-16.92-13.677-29.773-16.497-7.69-1.67-15.975-2.52-24.634-2.52-12.28 0-24.01 1.622-34.915 4.866-10.706 3.12-17.844 6.813-21.737 11.28l-.075.076-.025.05c-1 1.25-1.523 2.795-1.523 4.468 0 4.592 2.795 7.462 7.313 7.462 1.772 0 3.495-.624 5.117-1.822 4.318-3.295 11.006-6.215 19.89-8.735a111.302 111.302 0 0 1 18.62-3.742c-11.132 9.833-24.484 27.078-39.758 51.212a167.91 167.91 0 0 0-4.667 7.836c-5.265.973-10.007 2.096-14.125 3.395-15.574 5.067-23.46 12.754-23.46 22.887 0 6.09 3.395 11.205 10.133 15.223 6.114 3.645 14.65 5.566 25.332 5.69h.724c30.572 0 58.374-8.335 82.683-24.83 1.073 1.122 1.772 2.27 2.096 3.368 1.322 4.566 4.442 5.066 5.714 5.066 1.048 0 2.12-.3 3.195-.875l.1-.05.1-.074c2.045-1.273 3.143-3.27 3.143-5.615 0-2.995-1.422-6.14-4.393-9.558 5.39-4.518 10.232-9.435 14.425-14.6 6.69-8.46 10.06-17.92 10.06-28.152-.003-9.81-3.224-18.494-9.563-25.807zM226.185 132.35c-7.238-.425-15.4-1.923-15.4-6.59 0-3.868 5.267-7.712 14.8-10.906.825-.224 1.673-.475 2.547-.698-1.822 5.04-2.72 9.31-2.72 12.928 0 2.07.273 3.792.773 5.265zm20.365-.8c-.85-2.172-2.82-3.52-5.466-3.52-.275 0-.55 0-.85.025-.223.025-.45.05-.648.05-.2 0-.35-.024-.45-.024-.074-.274-.15-.798-.1-1.722.226-3.768 2.047-9.06 5.44-15.822 6.765-1.05 14.002-1.572 21.59-1.572 14.974 0 27.053 1.497 36.062 4.517-16.694 9.686-35.337 15.75-55.578 18.07zm84.43-42.726c-3.943 6.24-9.284 11.73-15.898 16.372-12.18-5.79-28.376-8.735-48.267-8.735-4.842 0-9.734.2-14.6.55 10.98-17.296 24.258-33.193 39.507-47.37 2.646-2.395 2.795-5.84.35-8.784-.475-.55-.948-1.05-1.498-1.473h.874c6.165 0 12.104.624 17.645 1.822 18.942 4.167 28.152 13.277 28.152 27.877 0 6.49-2.096 13.128-6.265 19.742zm246.928 32.468c0 9.186 2.87 15.1 8.56 17.596 1.05.475 2.147.723 3.222.723 1.396 0 2.72-.397 3.918-1.145 2.22-1.398 3.443-3.47 3.443-5.816 0-2.046-1.497-3.62-4.067-5.665-1.248-.998-1.422-1.896-1.422-2.672 0-6.488 2.423-14.773 7.19-24.582.872-1.646 1.122-3.095 1.048-4.317h.473c.327 0 .65-.025.976-.05l.05-.025h.075c3.82-.674 6.09-3.668 6.09-7.987 0-3.243-1.222-8.958-9.51-10.805a40.658 40.658 0 0 0-9.134-1.023c-15.373 0-32.27 8.136-50.313 24.184-4.7 4.172-8.518 8.172-11.508 12.032-2.19-4.73-5.95-8.628-11.28-11.633-3.093-1.822-6.862-3.17-11.204-3.993a10.32 10.32 0 0 0-2.222-.25c-3.518 0-5.863 2.246-5.863 5.565 0 1.373.523 5.89 7.486 6.514 1.897.2 3.944 1.076 6.065 2.597 4.242 3.095 6.314 6.814 6.314 11.355 0 2.596 0 8.635-12.804 8.635-1.873 0-3.994-.174-6.314-.523-22.236-3.77-45.123-12.006-68.06-24.533 5.892-7.76 11.433-16.47 16.497-25.905 14.825-27.378 27.478-43.076 37.66-46.695h.05c1.996-.75 4.168-1.123 6.49-1.123 4.166 0 7.236.898 9.06 2.646l1.347 1.297 1.848-.424c4.916-1.124 6.363-4.318 6.063-6.938-.598-5.366-8.908-10.63-16.77-10.63-.725 0-1.424.024-2.123.124-5.164.648-8.758 1.647-13.727 3.818-13.9 6.14-29.174 25.43-45.27 57.352-3.27 6.614-7.487 13.353-12.554 20.166-26.407-14.974-33.944-16.77-37.337-16.77-.076 0-.15 0-.225.024-4.193.125-11.107 2.42-10.78 16.147l.022 1.123c.176 7.886.424 17.694 4.992 24.933 3.27 5.166 8.76 8.012 15.448 8.012.725 0 1.473-.025 2.197-.1 6.59-.576 11.556-2.322 16.623-5.84 2.197-1.55 4.492-3.445 7.188-5.99.302-.275.9-.924 2.472-2.646.725-.8 1.822-1.996 2.72-2.97 2.622 1.474 4.644 2.52 6.216 3.17 16.797 8.185 27.928 13.353 33.043 15.423 16.872 6.938 31.147 10.482 42.403 10.482 7.676 0 13.766-1.647 18.246-4.89 2.136 3.506 5.97 5.413 11.202 5.413 3.22 0 6.79-.8 10.633-2.346l.05-.025.05-.024c12.154-5.393 23.934-12.953 35.09-22.537-.027.52-.027 1.02-.027 1.542zm-184.81-.798c-2.095 0-5.913-.373-7.56-2.744-2.297-3.244-2.772-8.96-3.07-12.754-.226-2.77.522-6.49 1.822-8.834v-.025c.074-.025.248-.05.572-.05 2.373 0 6.365 1.972 8.736 3.17.848.423 1.572.772 2.195 1.047 6.79 2.945 12.83 5.765 18.395 8.585-8.01 7.686-15.098 11.604-21.09 11.604zm170.884-5.616c-8.56 6.115-17.52 11.207-26.63 15.15-2.196.947-3.644 1.396-4.542 1.596.275-1.12.998-3.02 2.846-6.064 2.945-4.717 7.338-9.732 12.953-14.874 5.64-5.166 12.228-9.908 19.54-14.05 9.033-5.24 16.496-7.887 22.188-7.887.35 0 .723.024 1.05.05-3.196.198-5.692 1.895-7.09 4.815-3.144 6.514-9.984 13.652-20.316 21.263zm128.68 6.39c-4.068-2.32-8.785-3.493-14.05-3.493-1.374 0-2.77.05-4.194.123 1.873-5.465 3.994-11.63 6.29-18.418 2.396-4.866 7.237-8.66 14.45-11.306 4.566-1.647 5.516-4.342 5.516-6.34 0-1.545-.574-5.34-5.79-7.086l-.075-.025-.075-.025c-1.572-.45-3.07-.674-4.492-.674-3.22 0-6.066 1.198-8.262 3.494-5.515 5.516-15.423 13.277-29.448 23.06-14.65 10.283-25.756 16.972-33.043 19.892-1.374.572-2.423.922-3.222 1.146 1.398-2.62 5.19-8.136 15.424-19.216 6.064-6.44 10.78-11.332 13.95-14.476 2.347-2.372 2.57-5.54.55-8.336l-.05-.05-.05-.075c-1.697-2.096-3.992-3.195-6.713-3.195-1.974 0-3.67.674-4.968 1.973l-.025.026v.025c-13.352 13.853-22.71 24.758-27.852 32.47-2.92 4.242-4.393 8.535-4.393 12.777 0 7.39 4.242 11.63 11.63 11.63 2.97 0 6.265-.724 9.833-2.145 9.36-3.87 22.56-11.854 40.182-24.31a179.43 179.43 0 0 1-3.97 11.606c-7.263 1.848-15.173 4.717-23.608 8.56-12.43 5.565-24.483 13.9-35.84 24.733-11.78 11.407-19.093 22.112-21.788 31.897-.723 2.47-1.072 4.766-1.072 6.838 0 5.465 2.096 14.625 16.146 14.625.998 0 2.072-.05 3.17-.15 11.38-.95 22.61-5.79 33.344-14.4 13.525-10.78 24.508-25.38 32.668-43.35 1.473-3.172 3.87-9.385 7.264-18.92 3.594-.947 6.662-1.422 9.11-1.422 6.013 0 7.536 2.47 8.16 4.643 1.272 4.692 4.815 5.067 5.89 5.067.35 0 .7-.025 1.047-.076 3.345-.522 5.415-2.942 5.415-6.312 0-3.068-1.223-7.46-7.063-10.78zm-59.174 47.095c-11.28 13.975-23.31 22.56-35.713 25.506-1.873.448-3.37.673-4.47.673-2.194 0-2.194-.55-2.194-1.822 0-1.097.175-2.345.476-3.692 1.97-7.262 8.26-15.8 18.643-25.38 10.18-9.585 21.09-17.147 32.444-22.538a268.084 268.084 0 0 1 10.38-4.816c-5.714 12.227-12.28 22.96-19.566 32.07zm-281.17-47.918c-2.17 0-4.067.947-5.665 2.87-1.52 1.847-2.295 3.817-2.295 5.915 0 7.537 3.743 9.11 6.888 9.11 8.86 0 10.732-4.493 10.732-8.263 0-2.146-1.023-4.29-3.045-6.414-2.047-2.146-4.268-3.218-6.614-3.218zm-174.775 0c-2.172 0-4.068.947-5.666 2.87-1.522 1.82-2.296 3.817-2.296 5.915 0 7.537 3.745 9.11 6.89 9.11 8.86 0 10.73-4.493 10.73-8.263 0-2.146-1.022-4.29-3.043-6.414-2.048-2.146-4.268-3.218-6.614-3.218z"/></svg>
-                </a>
-
-                <div class="header__main-secondary-info flex">
-                    <vtex.cmc:formBusca />
-
-                    <ul class="header__icons unstyled">
-                        <li class="header__icons-item hidden-xs">
-                            <a href="/account" class="header__icons-anchor">
-                                <i class="header__icons-icon header__icons-icon--profile">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="72.824" height="73.206" viewBox="-9.5 0 72.824 73.206"><circle cx="26.912" cy="19.354" r="16"/><path d="M26.912 43.104c-18.226 0-33 8.06-33 18v7.334H59.91v-7.334c.002-9.942-14.772-18-32.998-18z"/></svg>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="header__icons-item">
-                            <a href="javascript:void(0);" class="header__icons-anchor js-open-minicart">
-                                <i class="header__icons-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="72.824" height="83.01" viewBox="-9.5 0 72.824 83.01"><path d="M58.593 70.922l-5.013-41.11c-.41-1.7-1.68-2.865-3.118-2.865H44.52c-1.838-12.823-9.088-22.14-18.01-22.14s-16.17 9.317-18.007 22.14H2.628c-1.438 0-2.705 1.16-3.115 2.856l-5.08 41.11c-.294 1.21-.105 2.52.51 3.533.612 1.013 1.58 1.61 2.605 1.61h57.927c1.025 0 1.99-.597 2.605-1.607.614-1.01.803-2.318.513-3.528zM26.51 11.807c4.452 0 9.314 5.974 10.916 15.14H15.598c1.602-9.167 6.463-15.14 10.913-15.14z"/></svg>
-                                </i>
-                                <span class="cart-items-count js-cart-items-count">0</span>
-                            </a>
-                        </li>
+                    <ul class="header__top-menu unstyled">
+                        <li class="header__top-menu-item"><a href="/institucional/a-rdlay" class="header__top-menu-anchor">A RDLay</a></li>
+                        <li class="header__top-menu-item"><a href="/institucional/comprar-no-atacado" class="header__top-menu-anchor">Como comprar no atacado</a></li>
+                        <li class="header__top-menu-item"><a href="/lojas" class="header__top-menu-anchor">Lojas</a></li>
+                        <!--<li class="header__top-menu-item"><a href="/institucional/multimarcas" class="header__top-menu-anchor">Multimarcas</a></li>-->
+                        <li class="header__top-menu-item"><a href="/institucional/trabalhe-conosco" class="header__top-menu-anchor">Trabalhe Conosco</a></li>
+                        <li class="header__top-menu-item"><a href="/institucional/fale-conosco" class="header__top-menu-anchor">Fale Conosco</a></li>
                     </ul>
+                </nav>
+
+                <div class="header__main flex">
+                    <button class="header__mobile-menu-button visible-xs js-open-menu-mobile"><i class="burger"></i></button>
+
+                    <a href="/" class="header__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="710.034" height="215.414" viewBox="0 0 710.034 215.414"><path fill="#161211" d="M165.938 40.98c-6.763-9.01-16.697-16.57-29.55-22.46-13.452-6.39-27.403-9.61-41.48-9.61-6.014 0-12.003.575-17.77 1.773-10.332 2.146-18.992 6.49-25.755 12.903C44.345 30.25 40.8 37.512 40.8 45.2c0 11.254 7.164 19.815 21.364 25.43 1 .4 1.997.6 2.97.6 1.223 0 2.37-.3 3.444-.9 2.12-1.197 3.294-3.118 3.294-5.415 0-2.42-1.373-4.392-3.793-5.465l-.076-.025-.075-.05c-9.335-3.593-13.877-8.46-13.877-14.85 0-4.167 2.12-8.06 6.514-11.93 4.617-4.093 11.106-7.013 19.292-8.635a83.598 83.598 0 0 1 15.422-1.447c12.305 0 24.383 2.695 35.864 8.01 19.94 9.285 29.65 20.766 29.65 35.042 0 7.088-2.697 12.978-8.237 17.994-5.64 5.115-12.655 7.61-21.464 7.61-12.978 0-29.15-1.946-32.52-11.13-1.022-2.87-3.32-4.567-6.29-4.642 2.796-5.54 5.59-11.106 8.387-16.67 3.943-7.538 7.063-13.03 9.26-16.35l.05-.074.05-.05c1.52-2.546 1.247-5.416-.75-7.91-1.747-2.148-4.018-3.27-6.614-3.27-2.296 0-4.218 1.172-5.417 3.294-.374.698-2.895 5.64-20.265 40.555-9.933 19.74-18.843 34.59-26.505 44.1-7.76 9.458-15.298 14.4-22.412 14.624h-.398c-1.872 0-3.494-.623-4.992-1.92-2.196-1.873-2.196-3.395-2.196-3.87 0-.5.15-.923.425-1.372l.024-.074.05-.05c1.972-3.443 1.023-6.963-2.446-8.934l-.125-.074-.15-.076c-1.047-.475-2.096-.723-3.12-.723-1.996 0-3.793.922-5.09 2.645-1.474 1.922-2.222 4.518-2.222 7.71 0 5.02 1.623 9.41 4.842 13.105 3.694 4.293 8.885 6.488 15.324 6.488h.724c11.855-.548 22.736-6.786 32.32-18.517 6.938-8.486 14.2-19.84 21.613-33.767.898-1.772 1.822-3.544 2.745-5.316 1.597 8.96 6.415 19.442 14.55 31.82 11.43 17.12 22.662 25.457 34.316 25.457.55 0 1.098-.025 1.623-.05 11.28-.624 17.495-7.138 17.495-18.32 0-3.07 0-12.353-6.54-12.353-2.545 0-4.018 1.05-4.817 1.947-1.248 1.374-1.746 3.22-1.497 5.517v.025l.025.05c1.123 8.784-1.997 9.733-3.044 10.032l-.05.025h-.05l-.525.173c-.45.15-.874.3-1.297.45h-.275c-9.06 0-18.817-11.28-28.45-32.745 7.136 2.196 15.322 3.294 24.432 3.294 13.202 0 24.06-3.593 32.245-10.706 7.986-6.988 12.004-15.798 12.004-26.155.002-9.06-3.217-17.943-9.606-26.38zm175.374 4.193c-6.913-8.136-16.92-13.677-29.773-16.497-7.69-1.67-15.975-2.52-24.634-2.52-12.28 0-24.01 1.622-34.915 4.866-10.706 3.12-17.844 6.813-21.737 11.28l-.075.076-.025.05c-1 1.25-1.523 2.795-1.523 4.468 0 4.592 2.795 7.462 7.313 7.462 1.772 0 3.495-.624 5.117-1.822 4.318-3.295 11.006-6.215 19.89-8.735a111.302 111.302 0 0 1 18.62-3.742c-11.132 9.833-24.484 27.078-39.758 51.212a167.91 167.91 0 0 0-4.667 7.836c-5.265.973-10.007 2.096-14.125 3.395-15.574 5.067-23.46 12.754-23.46 22.887 0 6.09 3.395 11.205 10.133 15.223 6.114 3.645 14.65 5.566 25.332 5.69h.724c30.572 0 58.374-8.335 82.683-24.83 1.073 1.122 1.772 2.27 2.096 3.368 1.322 4.566 4.442 5.066 5.714 5.066 1.048 0 2.12-.3 3.195-.875l.1-.05.1-.074c2.045-1.273 3.143-3.27 3.143-5.615 0-2.995-1.422-6.14-4.393-9.558 5.39-4.518 10.232-9.435 14.425-14.6 6.69-8.46 10.06-17.92 10.06-28.152-.003-9.81-3.224-18.494-9.563-25.807zM226.185 132.35c-7.238-.425-15.4-1.923-15.4-6.59 0-3.868 5.267-7.712 14.8-10.906.825-.224 1.673-.475 2.547-.698-1.822 5.04-2.72 9.31-2.72 12.928 0 2.07.273 3.792.773 5.265zm20.365-.8c-.85-2.172-2.82-3.52-5.466-3.52-.275 0-.55 0-.85.025-.223.025-.45.05-.648.05-.2 0-.35-.024-.45-.024-.074-.274-.15-.798-.1-1.722.226-3.768 2.047-9.06 5.44-15.822 6.765-1.05 14.002-1.572 21.59-1.572 14.974 0 27.053 1.497 36.062 4.517-16.694 9.686-35.337 15.75-55.578 18.07zm84.43-42.726c-3.943 6.24-9.284 11.73-15.898 16.372-12.18-5.79-28.376-8.735-48.267-8.735-4.842 0-9.734.2-14.6.55 10.98-17.296 24.258-33.193 39.507-47.37 2.646-2.395 2.795-5.84.35-8.784-.475-.55-.948-1.05-1.498-1.473h.874c6.165 0 12.104.624 17.645 1.822 18.942 4.167 28.152 13.277 28.152 27.877 0 6.49-2.096 13.128-6.265 19.742zm246.928 32.468c0 9.186 2.87 15.1 8.56 17.596 1.05.475 2.147.723 3.222.723 1.396 0 2.72-.397 3.918-1.145 2.22-1.398 3.443-3.47 3.443-5.816 0-2.046-1.497-3.62-4.067-5.665-1.248-.998-1.422-1.896-1.422-2.672 0-6.488 2.423-14.773 7.19-24.582.872-1.646 1.122-3.095 1.048-4.317h.473c.327 0 .65-.025.976-.05l.05-.025h.075c3.82-.674 6.09-3.668 6.09-7.987 0-3.243-1.222-8.958-9.51-10.805a40.658 40.658 0 0 0-9.134-1.023c-15.373 0-32.27 8.136-50.313 24.184-4.7 4.172-8.518 8.172-11.508 12.032-2.19-4.73-5.95-8.628-11.28-11.633-3.093-1.822-6.862-3.17-11.204-3.993a10.32 10.32 0 0 0-2.222-.25c-3.518 0-5.863 2.246-5.863 5.565 0 1.373.523 5.89 7.486 6.514 1.897.2 3.944 1.076 6.065 2.597 4.242 3.095 6.314 6.814 6.314 11.355 0 2.596 0 8.635-12.804 8.635-1.873 0-3.994-.174-6.314-.523-22.236-3.77-45.123-12.006-68.06-24.533 5.892-7.76 11.433-16.47 16.497-25.905 14.825-27.378 27.478-43.076 37.66-46.695h.05c1.996-.75 4.168-1.123 6.49-1.123 4.166 0 7.236.898 9.06 2.646l1.347 1.297 1.848-.424c4.916-1.124 6.363-4.318 6.063-6.938-.598-5.366-8.908-10.63-16.77-10.63-.725 0-1.424.024-2.123.124-5.164.648-8.758 1.647-13.727 3.818-13.9 6.14-29.174 25.43-45.27 57.352-3.27 6.614-7.487 13.353-12.554 20.166-26.407-14.974-33.944-16.77-37.337-16.77-.076 0-.15 0-.225.024-4.193.125-11.107 2.42-10.78 16.147l.022 1.123c.176 7.886.424 17.694 4.992 24.933 3.27 5.166 8.76 8.012 15.448 8.012.725 0 1.473-.025 2.197-.1 6.59-.576 11.556-2.322 16.623-5.84 2.197-1.55 4.492-3.445 7.188-5.99.302-.275.9-.924 2.472-2.646.725-.8 1.822-1.996 2.72-2.97 2.622 1.474 4.644 2.52 6.216 3.17 16.797 8.185 27.928 13.353 33.043 15.423 16.872 6.938 31.147 10.482 42.403 10.482 7.676 0 13.766-1.647 18.246-4.89 2.136 3.506 5.97 5.413 11.202 5.413 3.22 0 6.79-.8 10.633-2.346l.05-.025.05-.024c12.154-5.393 23.934-12.953 35.09-22.537-.027.52-.027 1.02-.027 1.542zm-184.81-.798c-2.095 0-5.913-.373-7.56-2.744-2.297-3.244-2.772-8.96-3.07-12.754-.226-2.77.522-6.49 1.822-8.834v-.025c.074-.025.248-.05.572-.05 2.373 0 6.365 1.972 8.736 3.17.848.423 1.572.772 2.195 1.047 6.79 2.945 12.83 5.765 18.395 8.585-8.01 7.686-15.098 11.604-21.09 11.604zm170.884-5.616c-8.56 6.115-17.52 11.207-26.63 15.15-2.196.947-3.644 1.396-4.542 1.596.275-1.12.998-3.02 2.846-6.064 2.945-4.717 7.338-9.732 12.953-14.874 5.64-5.166 12.228-9.908 19.54-14.05 9.033-5.24 16.496-7.887 22.188-7.887.35 0 .723.024 1.05.05-3.196.198-5.692 1.895-7.09 4.815-3.144 6.514-9.984 13.652-20.316 21.263zm128.68 6.39c-4.068-2.32-8.785-3.493-14.05-3.493-1.374 0-2.77.05-4.194.123 1.873-5.465 3.994-11.63 6.29-18.418 2.396-4.866 7.237-8.66 14.45-11.306 4.566-1.647 5.516-4.342 5.516-6.34 0-1.545-.574-5.34-5.79-7.086l-.075-.025-.075-.025c-1.572-.45-3.07-.674-4.492-.674-3.22 0-6.066 1.198-8.262 3.494-5.515 5.516-15.423 13.277-29.448 23.06-14.65 10.283-25.756 16.972-33.043 19.892-1.374.572-2.423.922-3.222 1.146 1.398-2.62 5.19-8.136 15.424-19.216 6.064-6.44 10.78-11.332 13.95-14.476 2.347-2.372 2.57-5.54.55-8.336l-.05-.05-.05-.075c-1.697-2.096-3.992-3.195-6.713-3.195-1.974 0-3.67.674-4.968 1.973l-.025.026v.025c-13.352 13.853-22.71 24.758-27.852 32.47-2.92 4.242-4.393 8.535-4.393 12.777 0 7.39 4.242 11.63 11.63 11.63 2.97 0 6.265-.724 9.833-2.145 9.36-3.87 22.56-11.854 40.182-24.31a179.43 179.43 0 0 1-3.97 11.606c-7.263 1.848-15.173 4.717-23.608 8.56-12.43 5.565-24.483 13.9-35.84 24.733-11.78 11.407-19.093 22.112-21.788 31.897-.723 2.47-1.072 4.766-1.072 6.838 0 5.465 2.096 14.625 16.146 14.625.998 0 2.072-.05 3.17-.15 11.38-.95 22.61-5.79 33.344-14.4 13.525-10.78 24.508-25.38 32.668-43.35 1.473-3.172 3.87-9.385 7.264-18.92 3.594-.947 6.662-1.422 9.11-1.422 6.013 0 7.536 2.47 8.16 4.643 1.272 4.692 4.815 5.067 5.89 5.067.35 0 .7-.025 1.047-.076 3.345-.522 5.415-2.942 5.415-6.312 0-3.068-1.223-7.46-7.063-10.78zm-59.174 47.095c-11.28 13.975-23.31 22.56-35.713 25.506-1.873.448-3.37.673-4.47.673-2.194 0-2.194-.55-2.194-1.822 0-1.097.175-2.345.476-3.692 1.97-7.262 8.26-15.8 18.643-25.38 10.18-9.585 21.09-17.147 32.444-22.538a268.084 268.084 0 0 1 10.38-4.816c-5.714 12.227-12.28 22.96-19.566 32.07zm-281.17-47.918c-2.17 0-4.067.947-5.665 2.87-1.52 1.847-2.295 3.817-2.295 5.915 0 7.537 3.743 9.11 6.888 9.11 8.86 0 10.732-4.493 10.732-8.263 0-2.146-1.023-4.29-3.045-6.414-2.047-2.146-4.268-3.218-6.614-3.218zm-174.775 0c-2.172 0-4.068.947-5.666 2.87-1.522 1.82-2.296 3.817-2.296 5.915 0 7.537 3.745 9.11 6.89 9.11 8.86 0 10.73-4.493 10.73-8.263 0-2.146-1.022-4.29-3.043-6.414-2.048-2.146-4.268-3.218-6.614-3.218z"/></svg>
+                    </a>
+
+                    <div class="header__main-secondary-info flex">
+                        <vtex.cmc:formBusca />
+
+                        <ul class="header__icons unstyled">
+                            <li class="header__icons-item hidden-xs">
+                                <a href="/account" class="header__icons-anchor">
+                                    <i class="header__icons-icon header__icons-icon--profile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="72.824" height="73.206" viewBox="-9.5 0 72.824 73.206"><circle cx="26.912" cy="19.354" r="16"/><path d="M26.912 43.104c-18.226 0-33 8.06-33 18v7.334H59.91v-7.334c.002-9.942-14.772-18-32.998-18z"/></svg>
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="header__icons-item">
+                                <a href="javascript:void(0);" class="header__icons-anchor js-open-minicart">
+                                    <i class="header__icons-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="72.824" height="83.01" viewBox="-9.5 0 72.824 83.01"><path d="M58.593 70.922l-5.013-41.11c-.41-1.7-1.68-2.865-3.118-2.865H44.52c-1.838-12.823-9.088-22.14-18.01-22.14s-16.17 9.317-18.007 22.14H2.628c-1.438 0-2.705 1.16-3.115 2.856l-5.08 41.11c-.294 1.21-.105 2.52.51 3.533.612 1.013 1.58 1.61 2.605 1.61h57.927c1.025 0 1.99-.597 2.605-1.607.614-1.01.803-2.318.513-3.528zM26.51 11.807c4.452 0 9.314 5.974 10.916 15.14H15.598c1.602-9.167 6.463-15.14 10.913-15.14z"/></svg>
+                                    </i>
+                                    <span class="cart-items-count js-cart-items-count">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <nav class="menu hidden-xs">
+                <div class="container">
+                    <ul class="menu__list unstyled">
+                        <li class="menu__item has-submenu"><a style="color: red;" href="/black-friday" class="menu__anchor">Black Friday</a></li>
+                        <li class="menu__item has-submenu">
+                            <a href="/blusas" class="menu__anchor">Blusas</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/blusas/alcinha" class="submenu__anchor">Alcinha</a></li>
+                                    <li class="submenu__item"><a href="/blusas/regata" class="submenu__anchor">Regata</a></li>
+                                    <li class="submenu__item"><a href="/blusas/t---shirt" class="submenu__anchor">T-Shirt</a></li>
+                                    <li class="submenu__item"><a href="/blusas/tqc" class="submenu__anchor">TQC</a></li>
+                                    <li class="submenu__item"><a href="/blusas/ciganinha" class="submenu__anchor">Ciganinha</a></li>
+                                    <li class="submenu__item"><a href="/blusas/cropped" class="submenu__anchor">Cropped</a></li>
+                                    <li class="submenu__item"><a href="/blusas/manga-curta" class="submenu__anchor">Manga Curta</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuBlusas />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/tops" class="menu__anchor">Tops</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/tops/cropped" class="submenu__anchor">Cropped</a></li>
+                                    <li class="submenu__item"><a href="/tops/underwear" class="submenu__anchor">Underwear</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuTops />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/casacos" class="menu__anchor">Casacos</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/casacos/blazers" class="submenu__anchor">Blazers</a></li>
+                                    <li class="submenu__item"><a href="/casacos/jaquetas" class="submenu__anchor">Jaquetas</a></li>
+                                    <li class="submenu__item"><a href="/casacos/cardigans" class="submenu__anchor">Cardigans</a></li>
+                                    <li class="submenu__item"><a href="/casacos/coletes" class="submenu__anchor">Coletes</a></li>
+                                    <li class="submenu__item"><a href="/casacos/quimonos" class="submenu__anchor">Quimonos</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuCasacos />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/saias" class="menu__anchor">Saias</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/saias/curta" class="submenu__anchor">Curta</a></li>
+                                    <li class="submenu__item"><a href="/saias/longa" class="submenu__anchor">Longa</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuSaias />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/calcas" class="menu__anchor">Calças</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/calcas/jeans" class="submenu__anchor">Jeans</a></li>
+                                    <li class="submenu__item"><a href="/calcas/leggings" class="submenu__anchor">Leggings</a></li>
+                                    <li class="submenu__item"><a href="/calcas/outras" class="submenu__anchor">Outras</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuCalcas />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/macacoes---jardineiras" class="menu__anchor">Macacões</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/macacoes---jardineiras/jardineira" class="submenu__anchor">Jardineira</a></li>
+                                    <li class="submenu__item"><a href="/macacoes---jardineiras/macacoes" class="submenu__anchor">Macacões</a></li>
+                                    <li class="submenu__item"><a href="/macacoes---jardineiras/macaquinhos" class="submenu__anchor">Macaquinhos</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuMacacoes />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/short---bermuda" class="menu__anchor">Short</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/short---bermuda/bermuda" class="submenu__anchor">Bermuda</a></li>
+                                    <li class="submenu__item"><a href="/short---bermuda/short" class="submenu__anchor">Short</a></li>
+                                    <li class="submenu__item"><a href="/short---bermuda/short-saia" class="submenu__anchor">Short Saia</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuShort />
+                            </div>
+                        </li>
+
+                        <li class="menu__item has-submenu">
+                            <a href="/vestidos" class="menu__anchor">Vestidos</a>
+
+                            <div class="submenu flex">
+                                <ul class="submenu__list unstyled">
+                                    <li class="submenu__item"><a href="/vestidos/curto" class="submenu__anchor">Curto</a></li>
+                                    <li class="submenu__item"><a href="/vestidos/longo" class="submenu__anchor">Longo</a></li>
+                                </ul>
+
+                                <vtex:BannerMenuVestidos />
+                            </div>
+                        </li>
+
+                        <!--<li class="menu__item"><a href="/novidades" class="menu__anchor">Novidades da Semana</a></li>-->
+                        <!--<li class="menu__item"><a href="/lookbook" class="menu__anchor">Lookbook</a></li>-->
+
+                        <li class="menu__item has-submenu"><a href="/novidades" class="menu__anchor">Novidades da Semana</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-
-        <nav class="menu hidden-xs">
-            <div class="container">
-                <ul class="menu__list unstyled">
-                    <li class="menu__item has-submenu">
-                        <a href="/blusas" class="menu__anchor">Blusas</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/blusas/alcinha" class="submenu__anchor">Alcinha</a></li>
-                                <li class="submenu__item"><a href="/blusas/regata" class="submenu__anchor">Regata</a></li>
-                                <li class="submenu__item"><a href="/blusas/t---shirt" class="submenu__anchor">T-Shirt</a></li>
-                                <li class="submenu__item"><a href="/blusas/tqc" class="submenu__anchor">TQC</a></li>
-                                <li class="submenu__item"><a href="/blusas/ciganinha" class="submenu__anchor">Ciganinha</a></li>
-                                <li class="submenu__item"><a href="/blusas/cropped" class="submenu__anchor">Cropped</a></li>
-                                <li class="submenu__item"><a href="/blusas/manga-curta" class="submenu__anchor">Manga Curta</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuBlusas />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/tops" class="menu__anchor">Tops</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/tops/cropped" class="submenu__anchor">Cropped</a></li>
-                                <li class="submenu__item"><a href="/tops/underwear" class="submenu__anchor">Underwear</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuTops />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/casacos" class="menu__anchor">Casacos</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/casacos/blazers" class="submenu__anchor">Blazers</a></li>
-                                <li class="submenu__item"><a href="/casacos/jaquetas" class="submenu__anchor">Jaquetas</a></li>
-                                <li class="submenu__item"><a href="/casacos/cardigans" class="submenu__anchor">Cardigans</a></li>
-                                <li class="submenu__item"><a href="/casacos/coletes" class="submenu__anchor">Coletes</a></li>
-                                <li class="submenu__item"><a href="/casacos/quimonos" class="submenu__anchor">Quimonos</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuCasacos />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/saias" class="menu__anchor">Saias</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/saias/curta" class="submenu__anchor">Curta</a></li>
-                                <li class="submenu__item"><a href="/saias/longa" class="submenu__anchor">Longa</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuSaias />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/calcas" class="menu__anchor">Calças</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/calcas/jeans" class="submenu__anchor">Jeans</a></li>
-                                <li class="submenu__item"><a href="/calcas/leggings" class="submenu__anchor">Leggings</a></li>
-                                <li class="submenu__item"><a href="/calcas/outras" class="submenu__anchor">Outras</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuCalcas />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/macacoes---jardineiras" class="menu__anchor">Macacões</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/macacoes---jardineiras/jardineira" class="submenu__anchor">Jardineira</a></li>
-                                <li class="submenu__item"><a href="/macacoes---jardineiras/macacoes" class="submenu__anchor">Macacões</a></li>
-                                <li class="submenu__item"><a href="/macacoes---jardineiras/macaquinhos" class="submenu__anchor">Macaquinhos</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuMacacoes />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/short---bermuda" class="menu__anchor">Short</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/short---bermuda/bermuda" class="submenu__anchor">Bermuda</a></li>
-                                <li class="submenu__item"><a href="/short---bermuda/short" class="submenu__anchor">Short</a></li>
-                                <li class="submenu__item"><a href="/short---bermuda/short-saia" class="submenu__anchor">Short Saia</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuShort />
-                        </div>
-                    </li>
-
-                    <li class="menu__item has-submenu">
-                        <a href="/vestidos" class="menu__anchor">Vestidos</a>
-
-                        <div class="submenu flex">
-                            <ul class="submenu__list unstyled">
-                                <li class="submenu__item"><a href="/vestidos/curto" class="submenu__anchor">Curto</a></li>
-                                <li class="submenu__item"><a href="/vestidos/longo" class="submenu__anchor">Longo</a></li>
-                            </ul>
-
-                            <vtex:BannerMenuVestidos />
-                        </div>
-                    </li>
-
-                    <li class="menu__item"><a href="/137?PS=16&map=productClusterIds&O=OrderByReleaseDateDESC" class="menu__anchor">Novidades da Semana</a></li>
-                    <li class="menu__item"><a href="/lookbook" class="menu__anchor">Lookbook</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
+    </header>
